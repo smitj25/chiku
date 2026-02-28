@@ -37,11 +37,11 @@ async def health():
     return {"status": "ok", "service": "sme-plug", "version": "0.1.0"}
 
 
-# -- Register routers (will be added in Phase 2) --
-# from routers import query, personas, audit
-# app.include_router(query.router)
-# app.include_router(personas.router)
-# app.include_router(audit.router)
+# -- Register routers --
+from routers import query, personas, audit
+app.include_router(query.router)
+app.include_router(personas.router)
+app.include_router(audit.router)
 
 
 if __name__ == "__main__":
