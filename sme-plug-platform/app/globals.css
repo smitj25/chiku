@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Colors ─────────────────────────────── */
+  --color-canvas: #08080c;
+  --color-canvas-subtle: #0d1117;
+  --color-surface: rgba(255, 255, 255, 0.02);
+  --color-surface-hover: rgba(255, 255, 255, 0.04);
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+
+  --color-lime: #a3e635;
+  --color-lime-dark: #65a30d;
+  --color-red-stat: #ef4444;
+
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #e5e7eb;
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+  --color-text-faint: rgba(255, 255, 255, 0.3);
+  --color-text-ghost: rgba(255, 255, 255, 0.15);
+
+  --color-plug-legal: #60a5fa;
+  --color-plug-healthcare: #34d399;
+  --color-plug-engineering: #fbbf24;
+
+  /* ── Fonts ──────────────────────────────── */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+}
+
+/* ── Resets ──────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ──────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(163, 230, 53, 0.3);
+  border-radius: 2px;
+}
+
+/* ── Animations ─────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseLime {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(163, 230, 53, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(163, 230, 53, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.animate-pulse-lime {
+  animation: pulseLime 2s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ── Scanline overlay ───────────────────── */
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px);
+}

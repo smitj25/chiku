@@ -1,0 +1,38 @@
+GDPR COMPLIANCE POLICY — ACME CORPORATION
+Version 2.1 | Effective: January 2025
+
+1. PURPOSE
+This policy outlines Acme Corporation's compliance with the General Data Protection Regulation (EU) 2016/679.
+
+2. SCOPE
+This policy applies to all employees, contractors, and third-party processors who handle personal data of EU residents on behalf of Acme Corporation.
+
+3. DATA SUBJECT RIGHTS (Article 15-22)
+3.1 Right of Access — Data subjects may request confirmation of whether personal data is being processed and obtain a copy within 30 calendar days.
+3.2 Right to Rectification — Inaccurate data must be corrected within 72 hours of notification.
+3.3 Right to Erasure — Also known as the "right to be forgotten." Acme must delete personal data within 30 days unless retention is legally required.
+3.4 Right to Data Portability — Data must be provided in a structured, machine-readable format (JSON or CSV) upon request.
+
+4. DATA BREACH NOTIFICATION (Article 33-34)
+4.1 Any data breach must be reported to the relevant supervisory authority within 72 hours of discovery.
+4.2 If the breach poses a HIGH RISK to individuals, those individuals must also be notified without undue delay.
+4.3 Failure to comply with breach notification requirements may result in fines up to €10,000,000 or 2% of annual global turnover, whichever is higher.
+
+5. PENALTIES (Article 83)
+5.1 Minor infractions: fines up to €10,000,000 or 2% of global annual turnover.
+5.2 Major infractions (e.g., violation of core principles, data subject rights, or international transfers): fines up to €20,000,000 or 4% of global annual turnover, whichever is higher.
+5.3 Acme's current annual global turnover: €500,000,000. Maximum theoretical fine: €20,000,000.
+
+6. DATA PROTECTION OFFICER
+6.1 Acme has appointed Sarah Chen (sarah.chen@acme.com) as Data Protection Officer.
+6.2 The DPO reports directly to the Board of Directors and cannot be dismissed for performing DPO duties.
+
+7. INTERNATIONAL DATA TRANSFERS
+7.1 Personal data may only be transferred outside the EU/EEA using Standard Contractual Clauses (SCCs) or an adequacy decision.
+7.2 Binding Corporate Rules (BCRs) have been approved for Acme's intra-group transfers.
+7.3 No transfers to countries without an adequacy decision unless SCCs or BCRs are in place.
+
+8. DATA RETENTION
+8.1 Customer PII: retained for 3 years after last interaction, then deleted.
+8.2 Employee records: retained for 7 years after termination.
+8.3 Financial records: retained for 10 years as per local tax law.

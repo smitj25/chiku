@@ -1,0 +1,63 @@
+{
+    "name": "smeplug",
+    "displayName": "SME-Plug",
+    "description": "Enterprise AI that cites its sources.",
+    "version": "0.0.1",
+    "publisher": "smeplug",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "AI",
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "smeplug.compare",
+                "title": "SME-Plug: Compare — Hallucination vs Cited"
+            },
+            {
+                "command": "smeplug.openPanel",
+                "title": "SME-Plug: Open Expert Panel"
+            }
+        ],
+        "configuration": {
+            "title": "SME-Plug",
+            "properties": {
+                "smeplug.apiKey": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Your API key (sme_live_...)"
+                },
+                "smeplug.pluginId": {
+                    "type": "string",
+                    "default": "legal",
+                    "enum": [
+                        "legal",
+                        "healthcare",
+                        "engineering"
+                    ]
+                },
+                "smeplug.backendUrl": {
+                    "type": "string",
+                    "default": "http://localhost:8000"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.85.0",
+        "@types/node": "^18.0.0",
+        "typescript": "^5.0.0"
+    }
+}

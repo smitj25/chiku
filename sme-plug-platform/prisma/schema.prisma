@@ -1,0 +1,87 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  tenantId     String
+  tenant       Tenant   @relation(fields: [tenantId], references: [id])
+  createdAt    DateTime @default(now())
+}
+
+model Tenant {
+  id          String     @id @default(cuid())
+  companyName String
+  plan        String     @default("starter")
+  users       User[]
+  apiKeys     ApiKey[]
+  purchases   Purchase[]
+  sessions    Session[]
+  createdAt   DateTime   @default(now())
+}
+
+model Plugin {
+  id          String         @id @default(cuid())
+  slug        String         @unique
+  name        String
+  domain      String
+  description String
+  color       String
+  price       Int
+  ragasScore  Float
+  purchases   Purchase[]
+  configs     PluginConfig[]
+}
+
+model Purchase {
+  id          String   @id @default(cuid())
+  tenantId    String
+  pluginId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  plugin      Plugin   @relation(fields: [pluginId], references: [id])
+  stripeSubId String?
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+}
+
+model PluginConfig {
+  id           String   @id @default(cuid())
+  tenantId     String
+  pluginId     String
+  plugin       Plugin   @relation(fields: [pluginId], references: [id])
+  persona      String
+  decisionTree String   // JSON array stored as string
+  guardrails   String   // JSON object stored as string
+  updatedAt    DateTime @updatedAt
+}
+
+model ApiKey {
+  id        String    @id @default(cuid())
+  tenantId  String
+  tenant    Tenant    @relation(fields: [tenantId], references: [id])
+  pluginId  String
+  name      String
+  keyHash   String    @unique
+  prefix    String
+  lastUsed  DateTime?
+  createdAt DateTime  @default(now())
+  revokedAt DateTime?
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  tenantId  String
+  tenant    Tenant   @relation(fields: [tenantId], references: [id])
+  plugId    String
+  messages  String   // JSON array of messages
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

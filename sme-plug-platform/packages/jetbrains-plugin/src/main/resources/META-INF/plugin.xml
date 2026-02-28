@@ -1,0 +1,81 @@
+<idea-plugin>
+    <id>dev.smeplug.jetbrains</id>
+    <name>SME-Plug</name>
+    <version>0.1.0</version>
+    <vendor email="hello@smeplug.dev" url="https://smeplug.dev">SME-Plug</vendor>
+
+    <description><![CDATA[
+        <h2>SME-Plug — AI Expert Plugins with Verified Citations</h2>
+        <p>Access domain-specific AI experts directly in your JetBrains IDE.
+        Every response includes verified citations from source documents.</p>
+
+        <h3>Features</h3>
+        <ul>
+            <li><b>Tool Window Chat</b> — Ask questions and get cited answers</li>
+            <li><b>Context Menu</b> — Right-click selected code to ask about it</li>
+            <li><b>Status Bar</b> — Shows active plugin and connection status</li>
+            <li><b>Multiple Plugins</b> — Legal, Healthcare, Engineering, Finance, Education, Cybersecurity</li>
+        </ul>
+
+        <h3>Setup</h3>
+        <ol>
+            <li>Install from JetBrains Marketplace</li>
+            <li>Go to Settings → Tools → SME-Plug</li>
+            <li>Enter your API key from <a href="https://smeplug.dev/api-keys">smeplug.dev/api-keys</a></li>
+            <li>Select your plugin</li>
+        </ol>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>0.1.0</h3>
+        <ul>
+            <li>Initial release</li>
+            <li>Chat tool window</li>
+            <li>API key configuration</li>
+            <li>Plugin selector</li>
+        </ul>
+    ]]></change-notes>
+
+    <idea-version since-build="232.0" until-build="242.*"/>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="SME-Plug"
+                     anchor="right"
+                     factoryClass="dev.smeplug.jetbrains.SMEPlugToolWindowFactory"
+                     icon="/icons/smeplug.svg"/>
+
+        <applicationConfigurable
+                parentId="tools"
+                instance="dev.smeplug.jetbrains.settings.SMEPlugConfigurable"
+                id="dev.smeplug.jetbrains.settings"
+                displayName="SME-Plug"/>
+
+        <applicationService
+                serviceImplementation="dev.smeplug.jetbrains.settings.SMEPlugSettings"/>
+
+        <statusBarWidgetFactory
+                id="SMEPlugStatusBar"
+                implementation="dev.smeplug.jetbrains.SMEPlugStatusBarFactory"/>
+    </extensions>
+
+    <actions>
+        <group id="SMEPlugGroup" text="SME-Plug" popup="true">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+
+            <action id="SMEPlug.AskAboutSelection"
+                    class="dev.smeplug.jetbrains.actions.AskAboutSelectionAction"
+                    text="Ask SME-Plug About Selection"
+                    description="Send selected text to your SME expert"
+                    icon="/icons/smeplug.svg"/>
+        </group>
+
+        <action id="SMEPlug.AskSME"
+                class="dev.smeplug.jetbrains.actions.AskSMEAction"
+                text="Ask SME-Plug"
+                description="Open input dialog to ask your SME expert">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt S"/>
+        </action>
+    </actions>
+</idea-plugin>
