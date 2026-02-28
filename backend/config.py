@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import os
 from pydantic import BaseModel
 from typing import Literal
@@ -24,57 +23,3 @@ class Settings(BaseModel):
     TARGET_CONTEXT_PRECISION: float = 0.88
 
 settings = Settings()
-=======
-"""
-config.py — Single source of truth for all environment variables and model settings.
-All modules import `settings` from here. No scattered os.getenv() calls.
-"""
-
-from pydantic_settings import BaseSettings, SettingsConfigDict
-
-
-class Settings(BaseSettings):
-    # LLM
-    anthropic_api_key: str
-    openai_api_key: str = ""
-    model_name: str = "claude-sonnet-4-5"
-    max_tokens: int = 2048
-    temperature: float = 0.2
-
-    # ChromaDB
-    chroma_host: str = "chroma"
-    chroma_port: int = 8000
-    chroma_persist_dir: str = "./chroma_db"
-
-    # RAG
-    top_k_chunks: int = 5
-    embedding_model: str = "text-embedding-3-small"
-
-    # Session
-    active_plug: str = "engineering_sme"
-    session_ttl_seconds: int = 3600
-
-    # Guardrails
-    citation_pattern: str = r"\[Source:\s*.+?,\s*pg\s*\d+\]"
-    pii_patterns: list[str] = [
-        r"\b\d{3}-\d{2}-\d{4}\b",
-        r"\b(?:\d{4}[- ]?){3}\d{4}\b",
-        r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b",
-    ]
-
-    # Paths
-    plugs_config_dir: str = "./data/plugs"
-    docs_dir: str = "./docs"
-
-    # Logging
-    log_level: str = "INFO"
-
-    model_config = SettingsConfigDict(
-        env_file=".env",
-        env_file_encoding="utf-8",
-        case_sensitive=False,
-    )
-
-
-settings = Settings()
->>>>>>> Stashed changes
