@@ -1,0 +1,102 @@
+ANTI-MONEY LAUNDERING (AML) COMPLIANCE POLICY
+Version 3.0 | Effective Date: January 1, 2026
+Classification: INTERNAL - CONFIDENTIAL
+
+=== CHAPTER 1: POLICY OVERVIEW ===
+Page 1
+
+1.1 Purpose
+This policy establishes the Anti-Money Laundering (AML) compliance framework for the organization.
+All employees involved in customer-facing or transaction-processing roles must adhere to this policy.
+
+1.2 Regulatory Framework
+This policy is designed to comply with:
+- Bank Secrecy Act (BSA)
+- USA PATRIOT Act
+- OFAC Sanctions Programs
+- FinCEN Regulations
+- FATF Recommendations
+
+=== CHAPTER 2: CUSTOMER DUE DILIGENCE (CDD) ===
+Page 5
+
+2.1 Know Your Customer (KYC) Requirements
+All new customer relationships require completion of the KYC process, which includes:
+- Verification of identity through government-issued identification
+- Verification of address through utility bills or bank statements
+- Assessment of the customer's risk profile
+- Screening against sanctions lists (OFAC SDN, UN, EU)
+
+2.2 Enhanced Due Diligence (EDD)
+Enhanced Due Diligence is required for:
+- Politically Exposed Persons (PEPs)
+- Customers from high-risk jurisdictions
+- Customers with complex ownership structures
+- Customers flagged by sanctions screening
+
+=== CHAPTER 3: SANCTIONS SCREENING ===
+Page 10
+
+3.1 Screening Requirements
+3.1.1 All customers must be screened against the OFAC SDN List at:
+- Account opening
+- Periodic review (quarterly)
+- When the SDN List is updated
+- When customer information changes
+
+3.1.2 Screening must include:
+- Exact name matching
+- Fuzzy name matching (to capture variations)
+- Date of birth verification
+- Address verification where available
+
+3.1.3 Match Handling
+When a potential match is identified:
+- The transaction must be immediately held
+- The Compliance Officer must be notified within 4 hours
+- A Suspicious Activity Report (SAR) may be required
+
+3.1.4 Voluntary Self-Disclosure (VSD)
+If the organization discovers that it has processed transactions involving a sanctioned party, 
+it must file a Voluntary Self-Disclosure with OFAC. Filing a VSD generally results in significantly 
+reduced penalties.
+
+3.2 False Positive Management
+Not every screening alert represents a true match. The compliance team must:
+- Document the basis for clearing false positives
+- Maintain records of all cleared alerts for 5 years
+- Review false positive rates quarterly
+
+3.3 Escalation Procedures
+All confirmed or suspected sanctions matches must be escalated as follows:
+1. Compliance Analyst → Compliance Manager (within 2 hours)
+2. Compliance Manager → Chief Compliance Officer (within 4 hours)
+3. Chief Compliance Officer → Board Risk Committee (within 24 hours if material)
+4. File blocking report with OFAC within 10 business days
+
+=== CHAPTER 4: TRANSACTION MONITORING ===
+Page 18
+
+4.1 Automated Monitoring
+The organization operates automated transaction monitoring systems that flag:
+- Unusual transaction patterns
+- Transactions exceeding threshold amounts
+- Transactions involving high-risk jurisdictions
+- Rapid movement of funds (layering indicators)
+
+4.2 Alert Investigation
+All alerts must be investigated within 5 business days. Investigation must include:
+- Review of customer profile and history
+- Analysis of transaction pattern
+- Determination of suspicious activity
+- Documentation of findings
+
+=== CHAPTER 5: REPORTING ===
+Page 22
+
+5.1 Suspicious Activity Reports (SARs)
+SARs must be filed with FinCEN within 30 calendar days of the initial detection of suspicious activity.
+The filing must include a detailed narrative describing the suspicious activity.
+
+5.2 Currency Transaction Reports (CTRs)
+CTRs are required for all cash transactions exceeding $10,000.

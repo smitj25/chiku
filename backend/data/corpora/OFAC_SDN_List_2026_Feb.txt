@@ -1,0 +1,80 @@
+OFFICE OF FOREIGN ASSETS CONTROL (OFAC)
+SPECIALLY DESIGNATED NATIONALS AND BLOCKED PERSONS LIST (SDN LIST)
+Updated: February 28, 2026
+
+=== SECTION 1: INTRODUCTION ===
+Page 1
+
+The SDN List is a publication of the U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC). 
+It contains the names of individuals and entities whose assets are blocked and with whom U.S. persons are 
+generally prohibited from dealing.
+
+=== SECTION 2: RUSSIA-RELATED DESIGNATIONS (Executive Order 14024) ===
+Page 4
+
+Executive Order 14024, signed on April 15, 2021, authorizes the imposition of sanctions with respect to 
+specified harmful foreign activities of the Government of the Russian Federation.
+
+--- Entry #14,890 ---
+Name: PETROV, Alexander Nikolaevich
+Type: Individual
+Date of Birth: March 12, 1975
+Nationality: Russian Federation
+Programme: RUSSIA-EO14024
+Date Listed: March 15, 2024
+Identification: Passport No. 72 3456789 (Russia)
+Address: 14 Tverskaya Street, Moscow, Russia
+
+Basis for Designation: Designated pursuant to Executive Order 14024 for being or having been a leader, 
+official, senior executive officer, or member of the board of directors of the Government of the Russian 
+Federation.
+
+Sanctions Implications:
+- All property and interests in property of this individual that are in the United States or in the 
+  possession or control of U.S. persons are blocked.
+- All transactions by U.S. persons or within the United States that involve any property or interests 
+  in property of this individual are prohibited.
+- Maximum civil penalty per violation: $356,579 or twice the amount of the underlying transaction, 
+  whichever is greater.
+- Criminal penalties: Up to $1,000,000 fine and/or 20 years imprisonment.
+
+--- Entry #14,891 ---
+Name: VOLKOV, Dmitri Sergeyevich
+Type: Individual
+Date of Birth: July 22, 1968
+Nationality: Russian Federation
+Programme: RUSSIA-EO14024
+Date Listed: June 1, 2024
+
+--- Entry #14,892 ---
+Name: SOKOLOV, Ivan Andreevich
+Type: Individual
+Date of Birth: November 3, 1980
+Nationality: Russian Federation
+Programme: RUSSIA-EO14024
+Date Listed: September 10, 2024
+
+=== SECTION 3: IRAN-RELATED DESIGNATIONS ===
+Page 12
+
+--- Entry #22,104 ---
+Name: TEHRANI, Mohammad Reza
+Type: Individual
+Programme: IRAN-EO13846
+Date Listed: January 5, 2025
+
+=== SECTION 4: GLOBAL TERRORISM DESIGNATIONS ===
+Page 18
+
+This section contains designations under Executive Order 13224, as amended.
+
+=== SECTION 5: UPDATE PROCEDURES ===
+Page 22
+
+The SDN List is updated on a regular basis. Financial institutions are required to screen their 
+customer databases against the SDN List on an ongoing basis and must implement procedures to 
+ensure compliance with OFAC regulations.
+
+Delisting Procedures:
+Individuals or entities who believe they have been incorrectly designated may apply for delisting 
+by submitting a request to OFAC.
