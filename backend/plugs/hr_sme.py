@@ -1,0 +1,22 @@
+"""
+hr_sme.py — HR SME plug: agent factory for human resources domain.
+"""
+
+from __future__ import annotations
+
+import anthropic
+
+from backend.agents.base_agent import SMEAgent
+from backend.core.tool_injector import ToolInjector
+
+
+def create_hr_agent(
+    plug_config: dict,
+    client: anthropic.Anthropic,
+) -> SMEAgent:
+    """
+    Factory function: returns a fully configured HR SME agent.
+    """
+    injector = ToolInjector()
+    tools = injector.get_tools_for_plug(plug_config)
+    return SMEAgent(plug_config=plug_config, tools=tools, client=client)

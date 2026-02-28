@@ -1,0 +1,52 @@
+[
+    {
+        "question": "What is the allowable bending stress for A36 structural steel under AISC 360?",
+        "ground_truth": "For A36 structural steel, the allowable bending stress is 0.66 × Fy = 0.66 × 250 MPa = 165 MPa for compact sections under AISC 360-22 Chapter F.",
+        "plug": "engineering_sme"
+    },
+    {
+        "question": "How do I calculate the maximum moment for a simply supported beam with a uniform load?",
+        "ground_truth": "The maximum moment for a simply supported beam with uniform distributed load w over span L is M_max = wL²/8, occurring at midspan.",
+        "plug": "engineering_sme"
+    },
+    {
+        "question": "What is the minimum concrete compressive strength f'c required for reinforced concrete columns per ACI 318?",
+        "ground_truth": "ACI 318-19 Section 26.4.3 requires a minimum specified compressive strength f'c of 17.2 MPa (2500 psi) for reinforced concrete members.",
+        "plug": "engineering_sme"
+    },
+    {
+        "question": "What live load should I use for an office building floor per ASCE 7?",
+        "ground_truth": "ASCE 7-22 Table 4.3-1 specifies a minimum uniform live load of 2.40 kPa (50 psf) for office occupancy.",
+        "plug": "engineering_sme"
+    },
+    {
+        "question": "What is the effective length factor K for a column that is fixed at the base and pinned at the top?",
+        "ground_truth": "For a column fixed at the base and pinned at the top (ideal conditions), the theoretical effective length factor K = 0.7 per AISC Commentary Table C-A-7.1.",
+        "plug": "engineering_sme"
+    },
+    {
+        "question": "How many days of annual leave are employees entitled to per company policy?",
+        "ground_truth": "Under the standard company leave policy, full-time employees are entitled to 15 days of annual leave per calendar year, increasing to 20 days after 5 years of service.",
+        "plug": "hr_sme"
+    },
+    {
+        "question": "What is the process for applying for maternity leave?",
+        "ground_truth": "Employees must notify HR at least 8 weeks before the expected due date, complete the Maternity Leave Application Form, and provide a medical certificate. Leave duration is 26 weeks as per the company policy.",
+        "plug": "hr_sme"
+    },
+    {
+        "question": "Is there a probationary period for new employees and what rights do they have during it?",
+        "ground_truth": "New employees undergo a 90-day probationary period per HR Policy Section 3.1. During this period, employees are entitled to statutory benefits but performance-based bonuses are not applicable.",
+        "plug": "hr_sme"
+    },
+    {
+        "question": "What are the company's policies on remote work and work-from-home arrangements?",
+        "ground_truth": "The company's hybrid work policy (Policy Section 5.2) allows eligible employees to work remotely up to 2 days per week, subject to manager approval and role suitability assessment.",
+        "plug": "hr_sme"
+    },
+    {
+        "question": "What notice period is required for voluntary resignation?",
+        "ground_truth": "Per the Employment Policy Section 8.1, employees are required to provide a minimum of 2 weeks written notice for resignation. Senior roles (Grade 5 and above) require 4 weeks notice.",
+        "plug": "hr_sme"
+    }
+]
