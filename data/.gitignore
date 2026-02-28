@@ -1,0 +1,12 @@
+# Ignore all data files by default
+*
+
+# Keep directories intact
+!*/
+
+# Whitelist JSON config files
+!plugs/
+!plugs/*.json
+
+# Keep this gitignore file
+!.gitignore
