@@ -1,0 +1,44 @@
+{
+    "name": "@tether/sdk",
+    "version": "0.1.0",
+    "description": "Official Node.js SDK for Tether — AI expert plugins with verified citations",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "module": "dist/index.mjs",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tether/sdk-node"
+    },
+    "keywords": [
+        "ai",
+        "sme",
+        "rag",
+        "citations",
+        "legal",
+        "healthcare",
+        "engineering"
+    ],
+    "scripts": {
+        "build": "tsc && tsc -p tsconfig.esm.json",
+        "prepublishOnly": "npm run build",
+        "test": "node --test test/"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.3.0",
+        "@types/node": "^20.0.0"
+    }
+}

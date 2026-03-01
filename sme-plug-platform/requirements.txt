@@ -1,0 +1,9 @@
+# SME-Plug Backend Dependencies
+fastapi>=0.109.0
+uvicorn>=0.27.0
+groq>=0.4.0
+python-dotenv>=1.0.0
+pydantic[email]>=2.5.0
+chromadb>=0.4.22
+sentence-transformers>=2.2.2
+pypdf>=3.17.0
