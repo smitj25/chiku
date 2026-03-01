@@ -546,18 +546,23 @@ async def v1_chat(
         latency_ms=latency_ms
     )
 
+    # Calculate dynamic RAGAS score based on retrieved chunks' relevance
+    avg_score = 0
+    print("CHUNKS ARE:", chunks)
+    if has_citations and chunks:
+        avg_score = sum(c.get("score", 0) for c in chunks) / len(chunks)
+        
     return {
         "response": reply,
         "citations": [{"source": c, "page": 0, "relevance": 0.95} for c in citations],
         "verified": has_citations,
-        "ragas_score": 0.92 if has_citations else 0,
+        "ragas_score": round(avg_score, 2) if has_citations else 0,
         "session_id": request.session_id or "",
         "guardrail_fired": False,
         "has_citations": has_citations,
         "plug_id": plug_id,
         "plug_color": PLUG_COLORS.get(plug_id, "#888"),
     }
-
 
 # ── DOCUMENT UPLOAD + MANAGEMENT ─────────────────────────────────────────────
 

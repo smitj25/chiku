@@ -68,12 +68,14 @@ def retrieve(
     # Build output — ChromaDB distances are L2; lower = better
     # Convert to a 0-1 similarity score: score = 1 / (1 + distance)
     chunks = []
+    print("RESULTS FROM CHROMA:", results)
     for doc, meta, dist in zip(
         results["documents"][0],
         results["metadatas"][0],
         results["distances"][0],
     ):
         score = 1.0 / (1.0 + dist)
+        print("Distance:", dist, "Score:", score, "Min Score Threshold:", min_score)
         if score < min_score:
             continue
         chunks.append({
